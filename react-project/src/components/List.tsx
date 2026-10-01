@@ -1,19 +1,23 @@
+import { useState } from "react";
+
 type ListProps = {
   data: string[];
 };
 
 function List({ data }: ListProps) {
-  function handleEvent(text: string) {
-    console.log(text);
+  const [index, setIndex] = useState(-1);
+
+  function handleClick(i: number) {
+    setIndex(i);
   }
 
   return (
     <ul className="list-group">
-      {data.map((element) => (
+      {data.map((element, i) => (
         <li
-          onClick={() => handleEvent(element)}
+          onClick={() => handleClick(i)}
           key={element}
-          className="list-group-item"
+          className={`list-group-item ${index === i ? "active" : ""}`}
         >
           {element}
         </li>
