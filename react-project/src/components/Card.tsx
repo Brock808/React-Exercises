@@ -7,7 +7,7 @@ type CardProps = {
 function Card({ children }: CardProps) {
   return (
     <div
-      className="card"
+      className="card p-2"
       style={{
         width: "350px",
       }}

@@ -1,6 +1,5 @@
 import Card, { CardBody } from "./components/Card";
 import List from "./components/List";
-// import Button from "./components/Button";
 import { useState } from "react";
 
 function App() {
@@ -13,21 +12,13 @@ function App() {
     setList([...list].slice(0, -1));
   }
   return (
-    // <Card>
-    //   <CardBody title="Hi, I am the title" text="I am the text" />
-    //   <List data={list} onSelect={handleSelect} />
-    //   <Button isLoading={isLoading} onClick={handleClick}>
-    //     Hola Mundo
-    //   </Button>
-    // </Card>
-
     <Card>
       <CardBody title="Add minion card" text="Press the buttons" />
-      <button className="btn btn-primary" onClick={addMinion}>
-        Agregar
+      <button className="btn btn-primary m-1" onClick={addMinion}>
+        Add
       </button>
-      <button className="btn btn-primary" onClick={removeMinion}>
-        Eliminar
+      <button className="btn btn-primary m-1" onClick={removeMinion}>
+        Remove
       </button>
       <List data={list} />
     </Card>
